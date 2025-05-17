@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindReader</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body">
+    <!--Intro-->
+    <div id="intro">
+        <h1 id="intro-text" onclick="start()">Hello!</h1>
+    </div>
+    
+    <!--Questions-->
+    <div id="questions" style="display: none;">
+        <h2 id="question-number">First Question:</h2>
+        <h4 id="question-text">What's your name?</h4>
+
+        <!--Input area-->
+        <div id="input-area">
+            <input type="text" id="text-input" placeholder="Type your name here ...">
+        </div>
+
+        <button id="submit-btn">Submit</button>
+    </div>
+
+    <!--Response Screen-->
+    <div id="response-screen" style="display: none;">
+        <img src="pictures/speechBubble.png" alt="Speech bubble" style="width:300px;">
+        <p id="response-text">Hmmm... ok</p>
+        <div>
+            <div id="progress-bar">
+            </div>
+        </div>
+
+    </div>
+
+    <!--Loading Screen-->
+    <div id="loading-screen" style="display: none;">
+        <div class="progress-bar" id="myBar"></div>
+        <div class="progress-label" id="progressLabel">Loading...</div>
+    </div>
+
+    <!--Final Screen-->
+    <div id="final-screen" style ="display: none;">
+        <h3 id="final-message"></h3>
+        <button onclick="showCrazyScreen()">That's crazyyy!! No way!!! Awesomeee!!!!</button>
+        <button onclick="showBruhScreen()">Bruh...</button>
+    </div>
+
+    <!--Crazy Screen-->
+    <div id="crazy-screen" style="display: none; text-align: center;">
+        <h3>What can I say ^.-.^</h3>
+    </div>
+
+    <!--bruh-screen-->
+    <div id="bruh-screen" style="display: none; text-align: center;">
+        <h3>Was I too specific?</h3>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
