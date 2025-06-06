@@ -1,5 +1,7 @@
 .body {
-    background-color: antiquewhite;
+    background-color: #e2e8ce;
+    margin: auto;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .main {
@@ -12,10 +14,63 @@
 
 }
 
+#intro, #questions, #response-screen, #loading-screen, #final-screen {
+    margin: auto;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+#question-number {
+    font-size: 75px;
+}
+
+#question-text {
+    font-size: 50px;
+    color: #545454;
+}
+
+#text-input {
+    border-radius: 4px;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    color: #738d1d;
+}
+
+#radio-input {
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+#number-input {
+    margin: 10px;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.btn-option {
+    border-radius: 4px;
+    color: #738d1d;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 5px;
+}
+
+#submit-btn {
+    margin: 15px;
+    background-color: #545454;
+    border-radius: 4px;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+}
+
 #intro-text {
     text-align: center;
     padding-top: 100px;
-    font-size: 120px;
+    font-size: 100px;
     cursor: pointer;
 }
 
@@ -29,11 +84,13 @@
     position: relative;
 }
 .progress-bar {
+    position: absolute;
     width:0%;
-    height: 100%;
-    background-color:lightblue;
+    height: 40px;
+    background-color:#738d1d;
     border-radius: 10px 0 0 10px;
     transition: width 0.3s ease;
+    bottom: 100px;
 }
 .progress-label {
     position: absolute;
@@ -42,4 +99,42 @@
     line-height: 40px;
     color: #777;
     font-weight: bold;
+    bottom: 40px;
+}
+
+#final-message {
+    font-size: 50px;
+    color: #000000;
+}
+
+.big-number {
+    color: #738d1d
+}
+
+.final-btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.final-btns {
+    display: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: #738d1d;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#bruh-screen {
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 75px;
+}
+
+#bruh-disu-screen {
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 75px;
 }

@@ -25,7 +25,7 @@
         <button id="submit-btn">Submit</button>
     </div>
 
-    <!--Response Screen-->
+    <!-- Response Screen
     <div id="response-screen" style="display: none;">
         <img src="pictures/speechBubble.png" alt="Speech bubble" style="width:300px;">
         <p id="response-text">Hmmm... ok</p>
@@ -34,30 +34,50 @@
             </div>
         </div>
 
-    </div>
+    </div> -->
 
     <!--Loading Screen-->
     <div id="loading-screen" style="display: none;">
-        <div class="progress-bar" id="myBar"></div>
-        <div class="progress-label" id="progressLabel">Loading...</div>
+        <img id="loading-image" src="" alt="Loading monkey" style="width: 300px; height: auto; margin-bottom: 10px;">
+        <div class="loading-screen">
+            <div id="myBar" class="progress-bar"></div>
+        </div>
+        <!-- <div class="progress-bar" id="myBar"></div>
+        <div class="progress-label" id="progressLabel">Loading...</div> -->
     </div>
 
     <!--Final Screen-->
     <div id="final-screen" style ="display: none;">
         <h3 id="final-message"></h3>
-        <button onclick="showCrazyScreen()">That's crazyyy!! No way!!! Awesomeee!!!!</button>
-        <button onclick="showBruhScreen()">Bruh...</button>
+        <div class="final-btn-container">
+            <button class="final-btns" style="display: none;" onclick="showCrazyScreen()">That's crazyyy!!</button>
+            <button class="final-btns" style="display: none;" onclick="showBruhScreen()">Bruh...</button>
+        </div>
     </div>
 
     <!--Crazy Screen-->
     <div id="crazy-screen" style="display: none; text-align: center;">
         <h3>What can I say ^.-.^</h3>
+        <img src="pictures/faceSmirk.png" alt="smirking face" style="width:200px; height:auto;"><br><br>
+        <button onclick="backToFinalScreen()">Go Back</button>
     </div>
 
     <!--bruh-screen-->
     <div id="bruh-screen" style="display: none; text-align: center;">
-        <h3>Was I too specific?</h3>
+        <h2>Was I too specific? Did I freak you out?</h2>
+        <button onclick="showDisUScreen()">...Go on</button>
     </div>
+
+    <div id="bruh-disu-screen" style="display:none;">
+        <h2>"Dis u?"</h2>
+        <!-- <img src="pictures/disu-face.png" alt="dis u face" style="width:200px;"> -->
+    </div>
+
+    <div id="bruh-final-screen" style="display:none; position: relative; text-align: center;">
+        <img id="bruh-bg" style="width:100%; height:auto;">
+        <img id="bruh-overlay" style="position: absolute; top: 20%; left: 50%; transform: translateX(-50%);">
+    </div>
+
     <script src="index.js"></script>
 </body>
 </html>
