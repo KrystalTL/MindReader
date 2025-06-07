@@ -47,7 +47,7 @@ function start(){
     } else if (clickCount === 1) {
         introText.innerHTML = "Don't worry ;) <br> it won't hurt...";
     } else if (clickCount === 2) {
-        introText.innerHTML = '<img src="MindReader/pictures/faceOriginalBlack.png" alt="faceOriginal" style="width:300px; height:auto;">';
+        introText.innerHTML = '<img src="pictures/face-smirk.png" alt="faceOriginal" style="align-items: center; width:700px; height:auto;">';
     } else if (clickCount === 3) {
         // Change screen from intro to start of the questions
         document.getElementById("intro").style.display = "none";
@@ -148,7 +148,7 @@ function submitAnswer() {
     if (currentQuestion === 3) {
         // Question 4 logic (0-indexed): choose image based on answer
         const isYes = answer.toLowerCase() === "yes";
-        imgElement.src = isYes ? "pictures/q4-yes-monkey.png" : "pictures/q4-no-monkey.png";
+        imgElement.src = isYes ? "pictures/q4-monkey-yes.png" : "pictures/q4-monkey-no.png";
     } else {
         // General question logic
         imgElement.src = `pictures/q${currentQuestion + 1}-monkey.png`;
@@ -179,49 +179,10 @@ function submitAnswer() {
             bar.innerText = progress + "%";
         }
     }, 50);
-    // document.getElementById("response-screen").style.display = "block";
-    // document.getElementById("response-text").innerText = `You said: "${answer}"`;
-
-    // // Update progress bar
-    // const questionProgress = ((currentQuestion + 1) / questions.length) * 100;
-    // document.getElementById("progress-bar").style.width = questionProgress + "%";
-
-    // // Advance
-    // setTimeout(() => {
-    //     document.getElementById("response-screen").style.display = "none";
-    //     document.getElementById("loading-screen").style.display = "block";
-
-    //     progress = 0;
-    //     document.getElementById("myBar").style.width = "0%";
-    //     document.getElementById("myBar").style.innerText = "";
-
-    //     interval = setInterval(() => {
-    //         if (progress >= 100) {
-    //             clearInterval(interval);
-    //             document.getElementById("loading-screen").style.display = "none";
-    
-    //             currentQuestion++;
-    //             if (currentQuestion < questions.length) {
-    //                 document.getElementById("questions").style.display = "block";
-    //                 loadQuestion();
-    //             } else {
-    //                 showResults();
-    //             }
-    //         } else {
-    //             progress += 3;
-    //             if (progress > 100){
-    //                 progress = 100;
-    //             }
-    //             const bar = document.getElementById("myBar");
-    //             bar.style.width = progress + "%";
-    //             bar.innerText = progress + "%";
-    //         }
-    //     }, 50);
-    // }, 1000);
 }
 
 function showResults() {
-    document.getElementById("response-screen").style.display = "none";
+    // document.getElementById("response-screen").style.display = "none";
     document.getElementById("loading-screen").style.display = "block";
 
     progress = 0;
@@ -242,9 +203,9 @@ function showResults() {
 
             // Step 2: After 2 seconds, append the number line
             setTimeout(() => {
-                finalMsg.innerHTML += `<br> the number <span class="big-number">${number}</span>`;
-                document.getElementsByClassName("final-btns")[0].style.display = "block";
-                document.getElementsByClassName("final-btns")[1].style.display = "block";
+                finalMsg.innerHTML += `<br> the number <span id="big-number">${number}</span>`;
+                document.getElementById("crazy-btn").style.display = "block";
+                document.getElementById("bruh-btn").style.display = "block";
             }, 1500);
         } else {
             progress++;
@@ -262,6 +223,7 @@ function showCrazyScreen() {
 
 function backToFinalScreen() {
     document.getElementById("crazy-screen").style.display = "none";
+    document.getElementById("bruh-final-screen").style.display = "none";
     document.getElementById("final-screen").style.display = "block";
 }
 
